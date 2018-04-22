@@ -6,7 +6,7 @@ generic(W : integer := 16);
 port(
 	CLK, SRESETN: in std_logic;
 	PAR_IN_L, PAR_IN_R: in std_logic_vector(W-1 downto 0);
-    -- LRC : in std_logic;
+    LRC : in std_logic;
 	 -- control signals for shifting bit out
 	SHIFT_OUT_L, SHIFT_OUT_R 	: in std_logic;
 	 -- control signals for load in parallel word
