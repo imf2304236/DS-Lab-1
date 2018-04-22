@@ -17,12 +17,11 @@ end PAR_TO_SER_LR;
 
 architecture BEHAVIORAL of PAR_TO_SER_LR is
 
+signal PAR_REG_L_NEXT, PAR_REG_L : std_logic_vector( W-1 downto 0);
+signal PAR_REG_R_NEXT, PAR_REG_R : std_logic_vector( W-1 downto 0);
+
 begin
 
--- dummy output
-P_DUMMY: process(CLK)
-begin
-	SER_OUT <= LRC after 2 ns;	
-end process;
+
 
 end BEHAVIORAL;
