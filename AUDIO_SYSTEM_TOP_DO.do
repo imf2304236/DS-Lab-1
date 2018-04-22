@@ -20,6 +20,15 @@ add wave -divider -height 32 Shift_Regs
 add wave -height 32 -radix default INST_AUDIO_CODEC_COM/INST_SER_TO_PAR_LR/SHIFT_REG_L
 add wave -height 32 -radix default INST_AUDIO_CODEC_COM/INST_SER_TO_PAR_LR/SHIFT_REG_R
 
+# display PAR_TO_SER input signals
+add wave -divider -height 32 PAR_TO_SER inputs
+add wave -height 32 -radix default INST_AUDIO_CODEC_COM/INST_SER_TO_PAR_LR/PAR_IN_L
+add wave -height 32 -radix default INST_AUDIO_CODEC_COM/INST_SER_TO_PAR_LR/PAR_IN_R
+add wave -height 32 -radix default INST_AUDIO_CODEC_COM/INST_SER_TO_PAR_LR/SHIFT_OUT_L
+add wave -height 32 -radix default INST_AUDIO_CODEC_COM/INST_SER_TO_PAR_LR/SHIFT_OUT_R
+add wave -height 32 -radix default INST_AUDIO_CODEC_COM/INST_SER_TO_PAR_LR/SAVE_R_LOAD_L
+add wave -height 32 -radix default INST_AUDIO_CODEC_COM/INST_SER_TO_PAR_LR/SAVE_L_LOAD_R
+
 # display ADC path
 add wave -divider -height 32 ADC_PATH
 add wave -height 32 -radix default DIN
