@@ -7,7 +7,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity FRQ_PRE_DIV is
-generic(P : integer := 2);
+generic(P : integer := 3);
 port(
     SRESETN: in  std_logic;
 	CLK:     in  std_logic;
