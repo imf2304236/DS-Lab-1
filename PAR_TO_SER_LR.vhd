@@ -47,19 +47,20 @@ begin
 	if SAVE_R_LOAD_L = '1' then
 		SHIFT_REG_L_NEXT <= PAR_IN_L after 2 ns;
 	elsif SHIFT_OUT_L = '1' then
+		if LRC = '1' then
+			SER_OUT <= SHIFT_REG_L(W-1) after 2 ns;
+		end if;
+
 		SHIFT_REG_L_NEXT <= SHIFT_REG_L(W-2 downto 0) & '0' after 2 ns;
 	end if;
 
 	if SAVE_L_LOAD_R = '1' then
 		SHIFT_REG_R_NEXT <= PAR_IN_R after 2 ns;
 	elsif SHIFT_OUT_R = '1' then
+		if LRC = '0' then
+			SER_OUT <= SHIFT_REG_R(W-1) after 2 ns;
+		end if;
 		SHIFT_REG_R_NEXT <= SHIFT_REG_R(W-2 downto 0) & '0' after 2 ns;
-	end if;
-
-	if LRC = '1' then
-		SER_OUT <= SHIFT_REG_L(W-1) after 2 ns;
-	else 
-		SER_OUT <= SHIFT_REG_R(W-1) after 2 ns;
 	end if;
 
 end process;
